@@ -1487,6 +1487,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sekar
       objectReference: {fileID: 0}
+    - target: {fileID: 2153183005307731512, guid: 55fa0f61e8a15709b9b2d1b72d06de6f, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2181402275146210719, guid: 55fa0f61e8a15709b9b2d1b72d06de6f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2146,11 +2150,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7084483761930010193, guid: 298055dedf6934e4393f08ae7dc0ad11, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 77.475
+      value: 133.13
       objectReference: {fileID: 0}
     - target: {fileID: 7084483761930010193, guid: 298055dedf6934e4393f08ae7dc0ad11, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.38
+      value: 1.19
       objectReference: {fileID: 0}
     - target: {fileID: 7084483761930010193, guid: 298055dedf6934e4393f08ae7dc0ad11, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2184,7 +2188,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8896405621024781299, guid: 298055dedf6934e4393f08ae7dc0ad11, type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8896405621024781299, guid: 298055dedf6934e4393f08ae7dc0ad11, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8896405621024781299, guid: 298055dedf6934e4393f08ae7dc0ad11, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8896405621024781299, guid: 298055dedf6934e4393f08ae7dc0ad11, type: 3}
+      propertyPath: m_SleepingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8896405621024781299, guid: 298055dedf6934e4393f08ae7dc0ad11, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5353423090324686738, guid: 298055dedf6934e4393f08ae7dc0ad11, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 298055dedf6934e4393f08ae7dc0ad11, type: 3}
 --- !u!1 &1170602218
 GameObject:
@@ -2959,6 +2984,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1673146871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673146865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb9c8a56e6481640b4f4016759a7468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  detectRange: 10
+  damageAmount: 10
 --- !u!1 &1681564251
 GameObject:
   m_ObjectHideFlags: 0
