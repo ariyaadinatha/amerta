@@ -36,7 +36,7 @@ public class EnemyMovement : MonoBehaviour
                 {
                     // Damage the player
                     Debug.Log("Damage!");
-                    // collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(damageAmount);
+                    collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(damageAmount);
                 }
             }
         }
