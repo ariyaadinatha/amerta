@@ -2132,6 +2132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hell Dog
       objectReference: {fileID: 0}
+    - target: {fileID: 572396916711815159, guid: 298055dedf6934e4393f08ae7dc0ad11, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 7084483761930010193, guid: 298055dedf6934e4393f08ae7dc0ad11, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -2999,6 +3003,19 @@ MonoBehaviour:
   moveSpeed: 5
   detectRange: 10
   damageAmount: 10
+--- !u!114 &1673146872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673146865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcdd52687e4f47ae08c33a830076e396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
 --- !u!1 &1681564251
 GameObject:
   m_ObjectHideFlags: 0
@@ -6983,6 +7000,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1839318480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839318474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b4ddf7295e1a190bbc95bed1bc7f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+--- !u!114 &1839318481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839318474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53e349d159c6b30e6af58dc0de25e42f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 50
 --- !u!1 &1842077134
 GameObject:
   m_ObjectHideFlags: 0
