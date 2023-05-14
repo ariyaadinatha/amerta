@@ -22,6 +22,16 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void Heal(int amount)
+    {
+        Debug.Log("Player healed for " + amount);
+        currentHealth += amount;
+        if (currentHealth <= 100)
+        {
+            currentHealth = 100;
+        }
+    }
+
     void Die()
     {
         // TODO: Handle the player's death

@@ -126,6 +126,7 @@ public class BossMovement : MonoBehaviour
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
+        Debug.Log("Boss taking damage");
         if (currentHealth <= 0)
         {
             Die();
@@ -136,5 +137,6 @@ public class BossMovement : MonoBehaviour
     {
         // Perform death behavior
         // ...
+        
     }
 }
