@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 87059571e4dfeb442baf5641cc0e1c36
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Apple Garamond
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 437dd822a03709d44a1a98f19ca43e97, type: 3}
+  - {fileID: 12800000, guid: a2828a0f13f26cb40aac5170508e3318, type: 3}
+  - {fileID: 12800000, guid: 179dbdf3e6bb2e349a174f87a326eaa9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

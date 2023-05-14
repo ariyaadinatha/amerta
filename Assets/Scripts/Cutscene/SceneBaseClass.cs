@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+
+namespace SceneSystem
+{
+    public class SceneBaseClass : MonoBehaviour
+    {
+        public bool finished { get; private set; }
+        protected IEnumerator WriteText(string input, TextMeshProUGUI textHolder, Color color, TMP_FontAsset font, float delay, AudioClip sound, AudioClip startSound, int step)
+        {
+            textHolder.color = color;
+            textHolder.font = font;
+            SoundManager.instance.PlaySound(startSound);
+            for (int i = 0; i < input.Length; i++)
+            {
+                textHolder.text += input[i];
+                if ((i + 1) % step == 0)
+                {
+                    SoundManager.instance.PlaySound(sound);
+                }
+                yield return new WaitForSeconds(delay);
+            }
+            yield return new WaitUntil(() => (Input.GetMouseButton(0) || Input.GetKey("return") || Input.GetKey("enter")));
+
+            finished = true;
+        }
+    }
+}
