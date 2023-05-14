@@ -13,22 +13,27 @@ public class HoundMovement : MonoBehaviour
     private bool stunned;
     private float cooldown;
     const float stunnedTime = 6f;
+    private Animator anim;
+    private bool isFacingRight = false;
+    private Vector2 direction;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        anim = gameObject.GetComponent<Animator>();
     }
 
     void Update()
     {
         float distance = Vector2.Distance(transform.position, playerTransform.position);
+        direction = (playerTransform.position - transform.position).normalized;
 
         if (!stunned)
         {
             if (distance <= detectRange)
             {
-                Vector2 direction = (playerTransform.position - transform.position).normalized;
+                anim.SetTrigger("Run");
                 rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
                 /*Debug.Log("detected");*/
 
@@ -45,6 +50,14 @@ public class HoundMovement : MonoBehaviour
                     }
                 }
             }
+            else
+            {
+                anim.SetTrigger("Idle");
+            }
+        }
+        else
+        {
+            anim.SetTrigger("Stunned");
         }
     }
     
@@ -59,6 +72,7 @@ public class HoundMovement : MonoBehaviour
             stunned = false;
             cooldown = 0f;
         }
+        Flip();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -67,6 +81,17 @@ public class HoundMovement : MonoBehaviour
         {
             /*Debug.Log("Kestun bro");*/
             stunned = true;
+        }
+    }
+
+    private void Flip()
+    {
+        if ((isFacingRight && direction.x < 0 )|| (!isFacingRight && direction.x > 0))
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
         }
     }
 }
