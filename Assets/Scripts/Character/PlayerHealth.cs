@@ -19,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
     {
         barHealth = (float) currentHealth / startingHealth;
         healthBar.fillAmount = barHealth;
-        Debug.Log("barhealth: " + barHealth);
+        /*Debug.Log("barhealth: " + barHealth);*/
     }
 
     public void TakeDamage(int amount)
@@ -35,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Heal(int amount)
     {
-        Debug.Log("Player healed for " + amount);
+        /*Debug.Log("Player healed for " + amount);*/
         currentHealth += amount;
         if (currentHealth <= 100)
         {
@@ -46,6 +46,6 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         // TODO: Handle the player's death
-        Debug.Log("Player has died!");
+        /*Debug.Log("Player has died!");*/
     }
 }

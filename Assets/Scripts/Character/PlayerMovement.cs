@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        horizontal = 0;
         if (!InDialogue() && !isOnTimeline){
             horizontal = Input.GetAxisRaw("Horizontal");
             if (Input.GetButtonDown("Jump") && IsGrounded())
