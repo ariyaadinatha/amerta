@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using stateEnum;
+using UnityEngine.UI;
 
 public class SacrificeStateController : MonoBehaviour
 {
+    public Image imageHolder;
     [SerializeField] private GameObject blindness;
     private SmallMessageController smallMessage;
 
@@ -13,6 +15,13 @@ public class SacrificeStateController : MonoBehaviour
     [SerializeField] private AudioClip deafTrack;
 
     [SerializeField] private AudioClip switchStateSFX;
+
+    [Header("State Image")]
+    [SerializeField] private Sprite deafState;
+    [SerializeField] private Sprite blindState;
+    [SerializeField] private Sprite muteState;
+
+
 
     private AudioSource audioSource;
     private bool isPlayingNormalTrack = false;
@@ -35,6 +44,8 @@ public class SacrificeStateController : MonoBehaviour
         audioSource.Play();
         state = sacrificeState.EAR;
         cooldown = cooldownTime;
+        imageHolder.sprite = deafState;
+        imageHolder.preserveAspect = true;
     }
 
     // Update is called once per frame
@@ -89,13 +100,19 @@ public class SacrificeStateController : MonoBehaviour
 
             if (nextState == sacrificeState.EAR)
             {
+                imageHolder.sprite = deafState;
                 audioSource.clip = deafTrack;
                 isPlayingNormalTrack = false;
                 audioSource.Play();
             }
             else if (nextState == sacrificeState.EYE)
             {
+                imageHolder.sprite = blindState;
                 blindness.SetActive(true);
+            }
+            else if (nextState == sacrificeState.MOUTH)
+            {
+                imageHolder.sprite = muteState;
             }
 
             state = nextState;
