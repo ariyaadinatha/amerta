@@ -8030,7 +8030,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 5a053ac15f624a14c955942023ee0535, type: 3}
     - target: {fileID: 3158679242661807227, guid: 55fa0f61e8a15709b9b2d1b72d06de6f, type: 3}
       propertyPath: isOnTimeline
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3416074817114531838, guid: 55fa0f61e8a15709b9b2d1b72d06de6f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -24205,7 +24205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6952601149604255089, guid: 0c59f2109246bf742a347f3777657d2f, type: 3}
       propertyPath: orthographic size
-      value: 80
+      value: 32.5
       objectReference: {fileID: 0}
     - target: {fileID: 6952601149604255100, guid: 0c59f2109246bf742a347f3777657d2f, type: 3}
       propertyPath: m_Name
