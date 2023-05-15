@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int startingHealth = 100;
+    public int attackDamage = 10;
 
     private int currentHealth;
     private bool isDead;
@@ -12,6 +13,19 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         currentHealth = startingHealth;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("PlayerAttack"))
+        {
+            currentHealth -= attackDamage;
+            Debug.Log("Boss taking damage 1");
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
+        }
     }
 
     public void TakeDamage(int amount)
@@ -30,19 +44,6 @@ public class EnemyHealth : MonoBehaviour
     void Die()
     {
         isDead = true;
-
-        // Disable enemy collider and renderer
-        Collider2D enemyCollider = GetComponent<Collider2D>();
-        if (enemyCollider != null)
-        {
-            enemyCollider.enabled = false;
-        }
-
-        Renderer enemyRenderer = GetComponent<Renderer>();
-        if (enemyRenderer != null)
-        {
-            enemyRenderer.enabled = false;
-        }
 
         // Destroy the enemy object
         Destroy(gameObject, 2f);

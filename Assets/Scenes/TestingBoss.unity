@@ -1077,10 +1077,18 @@ PrefabInstance:
       propertyPath: smallMessage
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1845404438, guid: 55fa0f61e8a15709b9b2d1b72d06de6f, type: 3}
+      propertyPath: m_TagString
+      value: PlayerAttack
+      objectReference: {fileID: 0}
     - target: {fileID: 544046011718835501, guid: 55fa0f61e8a15709b9b2d1b72d06de6f, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1326511551}
+    - target: {fileID: 889859380077795551, guid: 55fa0f61e8a15709b9b2d1b72d06de6f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2153183005307731512, guid: 55fa0f61e8a15709b9b2d1b72d06de6f, type: 3}
       propertyPath: m_Name
       value: Sekar

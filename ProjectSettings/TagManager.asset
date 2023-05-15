@@ -12,6 +12,7 @@ TagManager:
   - SmallMessage
   - HP
   - SkillCooldown
+  - PlayerAttack
   layers:
   - Default
   - TransparentFX

@@ -137,6 +137,6 @@ public class BossMovement : MonoBehaviour
     {
         // Perform death behavior
         // ...
-        
+        Destroy(gameObject, 2f);
     }
 }
