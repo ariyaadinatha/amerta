@@ -167,6 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeline: {fileID: 0}
+  noSlip: {fileID: 6200000, guid: 72fc7aa6ccae14846944d44400e6e35a, type: 2}
+  slip: {fileID: 6200000, guid: 19a0bd1059468ae45b33d71cb4176c7f, type: 2}
 --- !u!1 &7891084147562553697
 GameObject:
   m_ObjectHideFlags: 0

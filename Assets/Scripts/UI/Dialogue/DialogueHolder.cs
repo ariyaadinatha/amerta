@@ -9,10 +9,15 @@ namespace DialogueSystem
     {
         public bool finished {get;private set;}
         public PlayableDirector timeline;
+        [SerializeField] private PhysicsMaterial2D noSlip;
+        [SerializeField] private PhysicsMaterial2D slip;
+        private Collider2D coll;
         private void Awake(){
+            coll = GameObject.FindWithTag("Player").GetComponent<Collider2D>();
             StartCoroutine(dialogueSequence());
         }
         private IEnumerator dialogueSequence(){
+            coll.sharedMaterial = noSlip;
             for(int i=0; i<transform.childCount;i++){
                 Deactivate();
                 transform.GetChild(i).gameObject.SetActive(true);
@@ -21,9 +26,9 @@ namespace DialogueSystem
             finished = true;
             if (timeline != null)
             {
-                Debug.Log("jalan");
                 timeline.Play();
             }
+            coll.sharedMaterial = slip;
             gameObject.SetActive(false);
         }
         private void Deactivate(){
