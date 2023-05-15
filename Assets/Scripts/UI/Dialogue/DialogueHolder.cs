@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 namespace DialogueSystem
 {
@@ -9,6 +10,7 @@ namespace DialogueSystem
     {
         public bool finished {get;private set;}
         public PlayableDirector timeline;
+        public bool end;
         [SerializeField] private PhysicsMaterial2D noSlip;
         [SerializeField] private PhysicsMaterial2D slip;
         private Collider2D coll;
@@ -29,6 +31,10 @@ namespace DialogueSystem
                 timeline.Play();
             }
             coll.sharedMaterial = slip;
+            if (end)
+            {
+                SceneManager.LoadScene("CutsceneAkhir1");
+            }
             gameObject.SetActive(false);
         }
         private void Deactivate(){
