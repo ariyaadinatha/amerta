@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpingPower = 45f;
     private bool isFacingRight = true;
     private DialogueTrigger dialogueTrigger;
+    private AudioSource sfxSource;
     private float gravScaleInit;
     private Animator anim;
     float checking;
@@ -20,9 +21,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private AudioClip jumpSFX;
+    [SerializeField] private AudioClip walkingSFX;
 
     void Awake()
     {
+        sfxSource = transform.Find("SFX").gameObject.GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         anim.SetBool("Run", false);
     }
@@ -40,6 +44,11 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButtonDown("Jump") && IsGrounded())
             {
                 /*Debug.Log("jump yeah");*/
+
+                sfxSource.clip = jumpSFX;
+                sfxSource.loop = false;
+                sfxSource.volume = 0.1f;
+                sfxSource.Play();
                 anim.SetTrigger("Jump");
 
                 rb.AddForce(transform.up * jumpingPower, ForceMode2D.Impulse);
@@ -75,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (dialogueTrigger != null && !dialogueTrigger.IsDialogueFinished())
         {
+            StopWalkingSFX();
             anim.SetBool("Run", false);
             rb.velocity = new Vector2(0, -100);
         }
@@ -85,6 +95,18 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            anim.SetBool("Run", true);
+        }
+
+        //walking sfx
+        if (rb.velocity.x == 0 || rb.velocity.y >= 10f || down)
+        {
+            StopWalkingSFX();
+            anim.SetBool("Run", false);
+        }
+        else
+        {
+            PlayWalkingSFX();
             anim.SetBool("Run", true);
         }
         Flip();
@@ -135,5 +157,28 @@ public class PlayerMovement : MonoBehaviour
     public void SwitchIsOnTimeline(bool state)
     {
         isOnTimeline = state;
+    }
+
+    private void PlayWalkingSFX()
+    {
+        if(sfxSource.clip == walkingSFX)
+        {
+            sfxSource.UnPause();
+        }
+        else
+        {
+            sfxSource.clip = walkingSFX;
+            sfxSource.volume = 0.4f;
+            sfxSource.loop = true;
+            sfxSource.Play();
+        }
+    }
+
+    private void StopWalkingSFX()
+    {
+        if(sfxSource.clip == walkingSFX)
+        {
+            sfxSource.Pause();
+        }
     }
 }

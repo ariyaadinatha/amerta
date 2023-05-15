@@ -18,6 +18,7 @@ public class SkillController : MonoBehaviour
     private Animator skillUIAnimator;
     private GameObject questPointer;
     private RectTransform cooldownUI;
+    private AudioSource audioSkillSource;
 
     private void Awake()
     {
@@ -25,6 +26,10 @@ public class SkillController : MonoBehaviour
         state = sacrificeState.EAR;
         invisibleObjects = GameObject.FindGameObjectsWithTag("Invisible");
         cooldownUI = GameObject.FindWithTag("SkillCooldown").GetComponent<RectTransform>();
+        audioSkillSource = transform.Find("SkillUI").gameObject.GetComponent<AudioSource>();
+        audioSkillSource.loop = false;
+        audioSkillSource.clip = useSkillSFX;
+        audioSkillSource.volume = 0.3f;
 
         setInvisibleObjects(false);
         questPointer = GameObject.FindWithTag("QuestPointer");
