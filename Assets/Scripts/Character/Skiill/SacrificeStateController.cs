@@ -124,4 +124,26 @@ public class SacrificeStateController : MonoBehaviour
             smallMessage.Show("State is on cooldown");
         }
     }
+
+    public void SwitchState(int state)
+    {
+        sacrificeState nextState;
+        if(state == 0)
+        {
+            nextState = sacrificeState.EAR;
+        }
+        else if (state == 1)
+        {
+            nextState = sacrificeState.EYE;
+        }
+        else if (state == 2)
+        {
+            nextState = sacrificeState.MOUTH;
+        }
+        else
+        {
+            nextState = sacrificeState.MOUTH;
+        }
+        SwitchSacrificeState(nextState);
+    }
 }

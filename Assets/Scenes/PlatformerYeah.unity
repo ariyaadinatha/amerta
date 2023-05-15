@@ -22365,6 +22365,7 @@ MonoBehaviour:
     m_Signals:
     - {fileID: 11400000, guid: 229107fddd4dc8748a679558efdba580, type: 2}
     - {fileID: 11400000, guid: f66faa7371890f04ca8500c04f823b8f, type: 2}
+    - {fileID: 11400000, guid: fc3c28910b5553647b034d91c47adff8, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -22394,6 +22395,31 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1839318496}
+          m_TargetAssemblyTypeName: SacrificeStateController, Assembly-CSharp
+          m_MethodName: SwitchState
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1839318496 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3605432863183315079, guid: 55fa0f61e8a15709b9b2d1b72d06de6f, type: 3}
+  m_PrefabInstance: {fileID: 656195405}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839318474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be87a22d953be64780a659dfc04477f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1844707479
 GameObject:
   m_ObjectHideFlags: 0
