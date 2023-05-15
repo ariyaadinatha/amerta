@@ -9,6 +9,7 @@ namespace SceneSystem
     {
         public float delaySceneOut;
         public Animator anim;
+        public string sceneTujuan;
         private void Awake()
         {
             StartCoroutine(sceneSequence());
@@ -24,7 +25,14 @@ namespace SceneSystem
             }
             anim.SetTrigger("FadeOut");
             yield return new WaitForSeconds(delaySceneOut);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if(sceneTujuan == null || sceneTujuan == "")
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            else
+            {
+                SceneManager.LoadScene(sceneTujuan);
+            }
 
         }
         private void Deactivate()

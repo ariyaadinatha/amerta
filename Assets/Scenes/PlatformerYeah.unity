@@ -18765,7 +18765,7 @@ PrefabInstance:
     - target: {fileID: 5931067186297819719, guid: 9e6c0cdc161dcb74b822d9445ab33aa4, type: 3}
       propertyPath: quest.Array.data[1].dialogueTrigger
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2118572217}
     - target: {fileID: 5931067186297819769, guid: 9e6c0cdc161dcb74b822d9445ab33aa4, type: 3}
       propertyPath: m_Name
       value: QuestPointer
@@ -24372,11 +24372,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3681706671248287817, guid: 55fa0f61e8a15709b9b2d1b72d06de6f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 558.6
+      value: -252
       objectReference: {fileID: 0}
     - target: {fileID: 3681706671248287817, guid: 55fa0f61e8a15709b9b2d1b72d06de6f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23
+      value: 65.3
       objectReference: {fileID: 0}
     - target: {fileID: 3681706671248287817, guid: 55fa0f61e8a15709b9b2d1b72d06de6f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -71456,6 +71456,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &2118572217 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1791550561343946160, guid: 29a90fd8d92167b4aab8f9e14f018d6a, type: 3}
+  m_PrefabInstance: {fileID: 2118572213}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118572214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb10aa4e6de228b4ea1a945b3539f607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2121450653
 GameObject:
   m_ObjectHideFlags: 0
