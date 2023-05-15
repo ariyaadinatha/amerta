@@ -4057,9 +4057,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuestPointer
       objectReference: {fileID: 0}
+    - target: {fileID: 5931067186448054874, guid: 9e6c0cdc161dcb74b822d9445ab33aa4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931067186448054874, guid: 9e6c0cdc161dcb74b822d9445ab33aa4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931067186448054875, guid: 9e6c0cdc161dcb74b822d9445ab33aa4, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931067186448054875, guid: 9e6c0cdc161dcb74b822d9445ab33aa4, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931067186448054875, guid: 9e6c0cdc161dcb74b822d9445ab33aa4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5931067186448054877, guid: 9e6c0cdc161dcb74b822d9445ab33aa4, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931067186507592772, guid: 9e6c0cdc161dcb74b822d9445ab33aa4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931067186507592772, guid: 9e6c0cdc161dcb74b822d9445ab33aa4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5931067186507592773, guid: 9e6c0cdc161dcb74b822d9445ab33aa4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e6c0cdc161dcb74b822d9445ab33aa4, type: 3}
@@ -5046,6 +5078,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 544046011718835501, guid: 55fa0f61e8a15709b9b2d1b72d06de6f, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 800617697}
     - target: {fileID: 1213581337090863750, guid: 55fa0f61e8a15709b9b2d1b72d06de6f, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.018672291
