@@ -9,8 +9,7 @@ namespace DialogueSystem
     {
         public bool finished {get; private set;}
 
-        protected IEnumerator WriteText(string input, TextMeshProUGUI textHolder, Color color, float delay, AudioClip sound, AudioClip startSound, int step){
-            textHolder.color = color;
+        protected IEnumerator WriteText(string input, TextMeshProUGUI textHolder, float delay, AudioClip sound, AudioClip startSound, int step){
             SoundManager.instance.PlaySound(startSound);
             for(int i=0;i<input.Length;i++){
                 textHolder.text += input[i];

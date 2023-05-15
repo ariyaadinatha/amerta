@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7891084147497237579
 RectTransform:
   m_ObjectHideFlags: 0
@@ -174,8 +174,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 79bd36a7514832a4fba82fa1a593a49f, type: 2}
+  m_sharedMaterial: {fileID: -3058196983478431692, guid: 79bd36a7514832a4fba82fa1a593a49f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -276,8 +276,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -79.24005, y: 6.23}
-  m_SizeDelta: {x: 30, y: 30}
+  m_AnchoredPosition: {x: -79.24005, y: 11.7}
+  m_SizeDelta: {x: 30, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7891084148225426109
 CanvasRenderer:
@@ -335,7 +335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7891084148290893872
 RectTransform:
   m_ObjectHideFlags: 0
@@ -388,8 +388,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7eca1da8d94822e4985a61ccc1f2bd6f, type: 2}
+  m_sharedMaterial: {fileID: -4583713249972468605, guid: 7eca1da8d94822e4985a61ccc1f2bd6f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 0.5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -468,10 +468,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameHolder: {fileID: 7891084147562553695}
-  input: Hah, hah... kukira aku bakal mati
-  color: {r: 0, g: 0, b: 0, a: 1}
+  input: (ughh, aku di mana?)
   sound: {fileID: 8300000, guid: 7bc826ccc6b2c9e46a5e11121804b46c, type: 3}
   startSound: {fileID: 8300000, guid: 53233a364dde182479e0168fdbd8537d, type: 3}
-  characterSprite: {fileID: 21300000, guid: e5c5239141a19db4d9cf21eacb02cc96, type: 3}
+  characterSprite: {fileID: 21300000, guid: cfd776bd06902c0479c893af53c4079c, type: 3}
   characterName: Sekar
   imageHolder: {fileID: 7891084148225426110}

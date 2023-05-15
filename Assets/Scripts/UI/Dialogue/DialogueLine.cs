@@ -10,7 +10,6 @@ namespace DialogueSystem
         private TextMeshProUGUI textHolder;
         [SerializeField] private TextMeshProUGUI nameHolder;
         [SerializeField] private string input;
-        [SerializeField] private Color color;
 
         private float delay;
                 
@@ -34,14 +33,13 @@ namespace DialogueSystem
             step = (int)(textTickTime / delay) + 1;
             textHolder = GetComponent<TextMeshProUGUI>();
             nameHolder.text = characterName;
-            nameHolder.color = color;
 
             imageHolder.sprite = characterSprite;
             imageHolder.preserveAspect = true;
         }
 
         private void Start(){
-            StartCoroutine(WriteText(input, textHolder, color, delay, sound, startSound, step));
+            StartCoroutine(WriteText(input, textHolder, delay, sound, startSound, step));
         }
     }
 }
