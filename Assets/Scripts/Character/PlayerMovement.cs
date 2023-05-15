@@ -168,7 +168,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             sfxSource.clip = walkingSFX;
-            sfxSource.volume = 0.4f;
+            sfxSource.volume = 1f;
             sfxSource.loop = true;
             sfxSource.Play();
         }

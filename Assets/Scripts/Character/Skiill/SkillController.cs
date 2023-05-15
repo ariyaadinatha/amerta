@@ -29,7 +29,7 @@ public class SkillController : MonoBehaviour
         audioSkillSource = transform.Find("SkillUI").gameObject.GetComponent<AudioSource>();
         audioSkillSource.loop = false;
         audioSkillSource.clip = useSkillSFX;
-        audioSkillSource.volume = 0.3f;
+        audioSkillSource.volume = 0.075f;
 
         setInvisibleObjects(false);
         questPointer = GameObject.FindWithTag("QuestPointer");
